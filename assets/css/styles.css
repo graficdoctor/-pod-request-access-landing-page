@@ -58,13 +58,22 @@ p {
   margin-bottom: 2em;
 }
 
-.error-message {
+.message {
   color: var(--clr-accent-02);
   font-weight: 700;
   font-size: 0.75rem;
   margin-left: 3.5em;
   margin-top: -0.75em;
-  /* visibility: hidden; */
+  visibility: hidden;
+}
+
+.error {
+  visibility: visible;
+}
+
+.success {
+  visibility: visible;
+  color: var(--clr-accent-01);
 }
 
 /* Media Queries Typography */
@@ -171,6 +180,11 @@ Form & Button
   color: var(--clr-neutral-02);
   margin-bottom: 1em;
   width: 90%;
+}
+
+.form-input:not(:placeholder-shown) {
+  background: var(--clr-primary-03);
+  color: var(--clr-neutral-02);
 }
 
 /* ========== 
