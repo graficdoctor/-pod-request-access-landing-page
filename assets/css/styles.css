@@ -247,6 +247,7 @@ Media Queries
 
   .main-container {
     width: 65%;
+    max-width: 900px;
     margin-top: 0;
   }
 
