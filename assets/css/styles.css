@@ -10,6 +10,7 @@ Variables
 
 :root {
   --clr-accent-01: #54e6af;
+  --clr-accent-02: #fb3e3e;
   --clr-primary-01: #c2cbe5;
   --clr-primary-02: #5a668a;
   --clr-primary-03: #2c344b;
@@ -55,6 +56,15 @@ h1 span {
 
 p {
   margin-bottom: 2em;
+}
+
+.error-message {
+  color: var(--clr-accent-02);
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-left: 3.5em;
+  margin-top: -0.75em;
+  /* visibility: hidden; */
 }
 
 /* Media Queries Typography */
