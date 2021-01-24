@@ -1,6 +1,7 @@
 const form = document.getElementById('email-collector')
 const email = document.getElementById('email')
 const messagePopUp = document.querySelector('.message')
+const emailValue = email.value.trim()
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -8,25 +9,19 @@ form.addEventListener('submit', (e) => {
 })
 
 function checkInputs() {
-  const emailValue = email.value.trim()
-
   if (emailValue === '') {
-    setError('Input can not be blank')
+    message.classList.remove('valid')
+    message.classList.add('invalid')
+    message.innerHTML = 'You forgot to enter your address'
   } else if (!isEmail(emailValue)) {
-    setError('Oops! Please check your email')
+    message.classList.remove('valid')
+    message.classList.add('invalid')
+    message.innerHTML = 'Oops, something went wrong'
   } else {
-    setSuccess('Check your inbox for a confirmation mail')
+    message.classList.add('valid')
+    message.classList.remove('invalid')
+    message.innerHTML = 'Your email address is valid'
   }
-}
-
-function setError(message) {
-  messagePopUp.innerText = message
-  messagePopUp.className = 'message error'
-}
-
-function setSuccess(message) {
-  messagePopUp.innerText = message
-  messagePopUp.className = 'message success'
 }
 
 function isEmail(email) {

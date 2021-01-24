@@ -59,21 +59,20 @@ p {
 }
 
 .message {
-  color: var(--clr-accent-02);
   font-weight: 700;
   font-size: 0.75rem;
-  margin-left: 3.5em;
-  margin-top: -0.75em;
   visibility: hidden;
+  text-align: center;
 }
 
-.error {
+.invalid {
+  color: var(--clr-accent-02);
   visibility: visible;
 }
 
-.success {
-  visibility: visible;
+.valid {
   color: var(--clr-accent-01);
+  visibility: visible;
 }
 
 /* Media Queries Typography */
@@ -267,5 +266,10 @@ Media Queries
 
   .logo-container {
     width: 70%;
+  }
+
+  .message {
+    text-align: left;
+    margin-left: 3.5em;
   }
 }
